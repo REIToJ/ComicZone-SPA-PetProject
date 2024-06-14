@@ -1,0 +1,37 @@
+# Node.js
+myshop-backend/node_modules/
+myshop-backend/npm-debug.log*
+myshop-backend/yarn-debug.log*
+myshop-backend/yarn-error.log*
+myshop-backend/.env
+
+# Logs
+myshop-backend/logs
+myshop-backend/*.log
+myshop-backend/npm-debug.log*
+
+# Editor directories and files
+myshop-backend/.idea
+myshop-backend/.vscode
+myshop-backend/.DS_Store
+
+# dependencies
+myshop-frontend/node_modules/
+
+# production
+myshop-frontend/build/
+
+# misc
+myshop-frontend/.DS_Store
+myshop-frontend/.env.local
+myshop-frontend/.env.development.local
+myshop-frontend/.env.test.local
+myshop-frontend/.env.production.local
+
+# Log files
+myshop-frontend/logs
+myshop-frontend/*.log
+
+# Editor directories and files
+myshop-frontend/.idea
+myshop-frontend/.vscode
