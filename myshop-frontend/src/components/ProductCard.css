@@ -1,0 +1,33 @@
+.product-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: white;
+    text-align: center;
+  }
+  
+  .product-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  
+  .product-info {
+    margin-top: 10px;
+  }
+  
+  .price {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .buy-button {
+    background-color: #005FCC;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  

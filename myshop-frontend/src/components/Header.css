@@ -1,0 +1,61 @@
+.header {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: white;
+  }
+  
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+  
+  .header-top-left span,
+  .header-top-right a {
+    margin-right: 15px;
+  }
+  
+  .header-bottom {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .logo {
+    height: 40px;
+    margin-right: 20px;
+  }
+  
+  .catalog-button {
+    background-color: #005FCC;
+    color: white;
+    padding: 10px;
+    border: none;
+    margin-right: 20px;
+  }
+  
+  .search-bar {
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px;
+  }
+  
+  .search-button {
+    padding: 10px;
+    background-color: #005FCC;
+    color: white;
+    border: none;
+  }
+  
+  .navbar a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .user-menu a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #333;
+  }
+  

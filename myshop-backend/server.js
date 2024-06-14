@@ -1,10 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors'); // Добавьте эту строку
 const { sequelize } = require('./models');
 
 const app = express();
-const port = 3000;
+const port = 5000; // Измените номер порта здесь
 
+app.use(cors()); // Добавьте эту строку для включения CORS
 app.use(bodyParser.json());
 app.use('/api', require('./routes'));
 
