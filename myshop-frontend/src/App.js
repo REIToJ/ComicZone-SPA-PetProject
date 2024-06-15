@@ -1,33 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import Header from './components/Header';
 import ProductCard from './components/ProductCard';
 import './App.css';
 
-const products = [
-  {
-    name: "Product 1",
-    description: "This is product 1",
-    price: 2499,
-    image: "product1.png",
-  },
-  {
-    name: "Product 2",
-    description: "This is product 2",
-    price: 439,
-    image: "product2.png",
-  },
-  {
-    name: "Product 3",
-    description: "This is product 3",
-    price: 1819,
-    image: "product3.png",
-  },
-];
-
 function App() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:5000/api/products')
+      .then(response => {
+        setProducts(response.data);
+      })
+      .catch(error => {
+        console.error('There was an error fetching the products!', error);
+      });
+  }, []);
+
   return (
-    <div className="App">
-      <Header />
+    <div className="app-container">
+      <div className="header-container">
+        <Header />
+      </div>
       <div className="product-list">
         {products.map((product, index) => (
           <ProductCard key={index} product={product} />

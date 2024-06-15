@@ -13,6 +13,12 @@ Order.belongsTo(User, { foreignKey: 'user_id' });
 Review.belongsTo(Product, { foreignKey: 'product_id' });
 Review.belongsTo(User, { foreignKey: 'user_id' });
 
+// Optional: Define reverse associations
+Category.hasMany(Product, { foreignKey: 'category_id' });
+User.hasMany(Order, { foreignKey: 'user_id' });
+User.hasMany(Review, { foreignKey: 'user_id' });
+Product.hasMany(Review, { foreignKey: 'product_id' });
+
 module.exports = {
   User,
   Category,

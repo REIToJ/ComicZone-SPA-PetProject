@@ -1,24 +1,26 @@
 module.exports = (sequelize, DataTypes) => {
-    return sequelize.define('Order', {
-      order_id: {
-        type: DataTypes.INTEGER,
-        autoIncrement: true,
-        primaryKey: true,
+  const Order = sequelize.define('Order', {
+    order_id: {
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
+      primaryKey: true,
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Users',
+        key: 'user_id',
       },
-      user_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'Users',
-          key: 'user_id',
-        },
-      },
-      date: {
-        type: DataTypes.DATE,
-        defaultValue: DataTypes.NOW,
-      },
-      status: {
-        type: DataTypes.STRING,
-      },
-    });
-  };
-  
+    },
+    date: {
+      type: DataTypes.DATE,
+      allowNull: true,
+    },
+    status: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+  });
+
+  return Order;
+};

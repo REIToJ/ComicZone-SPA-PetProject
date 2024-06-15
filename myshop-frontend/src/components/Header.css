@@ -1,61 +1,177 @@
 .header {
-    width: 100%;
-    padding: 10px 20px;
-    background-color: white;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: white;
+  box-sizing: border-box; /* Чтобы padding входил в width */
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  flex-wrap: wrap; /* Добавлено, чтобы элементы переносились на новую строку при необходимости */
+}
+
+.header-top-left span,
+.header-top-right a {
+  margin-right: 15px;
+  white-space: nowrap; /* Чтобы текст не переносился внутри элементов */
+}
+
+.header-top-right .top-link {
+  padding: 2px 8px;
+  border-radius: 15px;
+  background-color: #f5f5f5;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.header-top-right .top-link:hover {
+  background-color: #e0e0e0;
+}
+
+.header-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  flex-wrap: wrap; /* Добавлено, чтобы элементы переносились на новую строку при необходимости */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  white-space: nowrap; /* Чтобы текст не переносился внутри элементов */
+}
+
+.logo-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #005FCC;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #005FCC;
+}
+
+.catalog-button {
+  display: flex;
+  align-items: center;
+  background-color: #005FCC;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  white-space: nowrap; /* Чтобы текст не переносился внутри кнопки */
+  margin-right: 10px; /* Пространство между кнопкой каталога и строкой поиска */
+}
+
+.catalog-button .material-icons {
+  margin-right: 5px;
+}
+
+.search-container {
+  display: flex;
+  flex: 1;
+  margin-right: 10px; /* Пространство между строкой поиска и элементами после нее */
+}
+
+.search-bar {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #005FCC;
+  border-right: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  box-sizing: border-box; /* Чтобы padding входил в width */
+}
+
+.search-button {
+  padding: 10px;
+  background-color: #005FCC;
+  color: white;
+  border: 2px solid #005FCC;
+  border-left: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+  white-space: nowrap; /* Чтобы текст не переносился внутри кнопки */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  flex-wrap: wrap; /* Добавлено, чтобы элементы переносились на новую строку при необходимости */
+}
+
+.navbar a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+  white-space: nowrap; /* Чтобы текст не переносился внутри ссылок */
+}
+
+.navbar .material-icons {
+  margin-right: 5px;
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; /* Добавлено, чтобы элементы переносились на новую строку при необходимости */
+}
+
+.user-menu a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  flex-direction: column; /* Ставим иконки над текстом */
+  align-items: center;
+  white-space: nowrap; /* Чтобы текст не переносился внутри ссылок */
+}
+
+.user-menu .material-icons {
+  margin-right: 0; /* Убираем отступ справа, так как иконки теперь над текстом */
+  margin-bottom: 5px; /* Добавляем отступ снизу для иконок */
+}
+
+@media (max-width: 768px) {
+  .header-top,
+  .header-bottom,
+  .navbar,
+  .user-menu {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  .header-top {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
-  }
-  
-  .header-top-left span,
-  .header-top-right a {
-    margin-right: 15px;
-  }
-  
+
   .header-bottom {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
+    align-items: flex-start;
   }
-  
-  .logo {
-    height: 40px;
-    margin-right: 20px;
-  }
-  
-  .catalog-button {
-    background-color: #005FCC;
-    color: white;
-    padding: 10px;
-    border: none;
-    margin-right: 20px;
-  }
-  
-  .search-bar {
-    flex: 1;
-    padding: 10px;
-    margin-right: 10px;
-  }
-  
-  .search-button {
-    padding: 10px;
-    background-color: #005FCC;
-    color: white;
-    border: none;
-  }
-  
+
+  .catalog-button,
+  .search-container,
+  .search-bar,
+  .search-button,
+  .user-menu a,
   .navbar a {
-    margin-right: 15px;
-    text-decoration: none;
-    color: #333;
+    margin-bottom: 10px;
+    width: 100%;
   }
-  
-  .user-menu a {
-    margin-right: 15px;
-    text-decoration: none;
-    color: #333;
+
+  .user-menu a,
+  .navbar a {
+    justify-content: flex-start;
   }
-  
+}

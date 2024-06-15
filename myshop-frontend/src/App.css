@@ -1,10 +1,37 @@
-.App {
-  font-family: Arial, sans-serif;
+/* Обертка для всего содержимого страницы */
+.app-container {
+  background-color: #f5f5f5; /* Цвет фона */
+  min-height: 100vh; /* Минимальная высота страницы */
+  padding: 0px; /* Отступы вокруг содержимого */
+  box-sizing: border-box; /* Включаем отступы в размеры блока */
+}
+
+.header-container {
+  width: 100%; /* Ширина 100%, чтобы хэдер занимал всю ширину экрана */
 }
 
 .product-list {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
-  margin: 20px;
+  justify-content: center; /* Центрируем содержимое */
+  gap: 20px; /* Отступы между карточками */
 }
+
+.product-card {
+  background-color: white; /* Цвет фона карточек */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+.header {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: white;
+  box-sizing: border-box; /* Чтобы padding входил в width */
+  margin-bottom: 20px; /* Добавим отступ снизу, чтобы отделить хэдер от остального содержимого */
+}
+
+/* Остальные стили вашего проекта */

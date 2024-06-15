@@ -5,7 +5,8 @@ const router = express.Router();
 // Create a new product
 router.post('/', async (req, res) => {
   try {
-    const product = await Product.create(req.body);
+    const { name, description, price, category_id, image_url } = req.body;
+    const product = await Product.create({ name, description, price, category_id, image_url });
     res.status(201).json(product);
   } catch (error) {
     res.status(400).json({ error: error.message });
